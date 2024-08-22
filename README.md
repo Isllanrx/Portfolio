@@ -36,6 +36,6 @@ Se você quiser contribuir para este projeto, sinta-se à vontade para abrir um 
 ## Licença
 
 Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
--
+---
 Obrigado por visitar meu portfólio! 🚀
--
+---
