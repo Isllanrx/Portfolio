@@ -7,7 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 body {
     background-color: #141414;
     height: 100vh;
@@ -16,8 +15,6 @@ body {
 .interface {
     max-width: 1280px;
     margin: 0 auto;
-
-
 }
 
 .flex {
@@ -55,7 +52,6 @@ button:hover,
 
 header {
     padding: 40px 4%;
-
 }
 
 header>.interface {
@@ -63,7 +59,6 @@ header>.interface {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 header a {
@@ -71,7 +66,6 @@ header a {
     text-decoration: none;
     display: inline-block;
     transition: .2s;
-
 }
 
 header nav.menu-desktop a:hover {
@@ -81,13 +75,11 @@ header nav.menu-desktop a:hover {
 
 header nav ul {
     list-style-type: none;
-
 }
 
 header nav.menu-desktop ul li {
     display: inline-block;
     padding: 0 40px;
-
 }
 
 /* Estilo do menu mobile */
@@ -137,7 +129,6 @@ header nav.menu-desktop ul li {
     font-weight: 300;
     padding: 20px 8%;
     display: block;
-
 }
 
 .menu-mobile nav ul li a:hover {
@@ -181,7 +172,6 @@ section.topo-do-site .flex {
 .topo-do-site .txt-topo-site p {
     color: #ffffff;
     margin: 40px 0;
-
 }
 
 .topo-do-site .img-topo-site img {
@@ -217,7 +207,6 @@ section.especialidades .flex {
     border-radius: 20px;
     margin-top: 45px;
     transition: .2s;
-
 }
 
 .especialidades .especialidades-box:hover {
@@ -238,13 +227,11 @@ section.especialidades .flex {
 /* Estilo do sobre*/
 section.sobre {
     padding: 80px 4%;
-
 }
 
 section.sobre .flex {
     align-items: center;
     gap: 50px;
-
 }
 
 .sobre .txt-sobre {
@@ -255,7 +242,6 @@ section.sobre .flex {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 30px;
-
 }
 
 
@@ -302,7 +288,6 @@ section.portfolio .flex {
     cursor: pointer;
     border-radius: 40px;
     position: relative;
-
 }
 
 .img-port:hover {
@@ -361,13 +346,11 @@ form textarea {
 form textarea {
     resize: none;
     max-height: 400px;
-
 }
 
 form .btn-enviar {
     margin-top: 20px;
     text-align: center;
-
 }
 
 form .btn-enviar input {
@@ -406,7 +389,6 @@ footer .line-footer p i {
 
 footer .line-footer p a {
     color: #ffffff;
-
 }
 
 /* Estilo Responsivo */
@@ -416,7 +398,6 @@ footer .line-footer p a {
     /* Classes gerais */
     .flex {
         flex-direction: column;
-
     }
 
     h2.titulo {
