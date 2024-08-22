@@ -457,6 +457,7 @@ footer .line-footer p a {
     }
 
     .img-sobre img {
+        border-radius: 30px;
         width: 100%;
     }
 
