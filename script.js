@@ -1,40 +1,50 @@
-// Seleção de elementos
-const elements = {
-  btnMenu: document.getElementById('btn-menu'),
-  menu: document.getElementById('menu-mobile'),
-  overlay: document.getElementById('overlay-menu'),
-  btnFechar: document.querySelector('.menu-mobile .btn-fechar'),
-  navLinks: document.querySelectorAll('.menu-desktop ul li a, .menu-mobile ul li a')
-};
+// Armazena o estado do menu (aberto ou fechado)
+let isMenuOpen = false;
 
-// Funções para abrir e fechar menu
+// Seleciona os elementos apenas uma vez
+const btnMenu = document.getElementById('btn-menu');
+const menu = document.getElementById('menu-mobile');
+const overlay = document.getElementById('overlay-menu');
+const btnFechar = menu.querySelector('.btn-fechar');
+
+// Função para abrir o menu
 function openMenu() {
-  elements.menu.classList.add('abrir-menu');
+  menu.classList.add('abrir-menu');
+  isMenuOpen = true;
 }
 
+// Função para fechar o menu
 function closeMenu() {
-  elements.menu.classList.remove('abrir-menu');
+  menu.classList.remove('abrir-menu');
+  isMenuOpen = false;
 }
 
-// Eventos de clique
-elements.btnMenu.addEventListener('click', openMenu);
-elements.btnFechar.addEventListener('click', closeMenu);
-elements.overlay.addEventListener('click', closeMenu);
+// Adiciona os event listeners apenas uma vez
+btnMenu.addEventListener('click', openMenu);
+btnFechar.addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
 
-// Fechar menu com tecla Esc
+// Fecha o menu com a tecla Esc
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
+  if (event.key === 'Escape' && isMenuOpen) {
     closeMenu();
   }
 });
 
-// Rolagem suave e fechamento do menu ao clicar em um link
-elements.navLinks.forEach(link => {
+// Seleciona os links do menu, exceto os da "top bar"
+const navLinks = document.querySelectorAll('.menu-mobile ul li a');
+
+// Adiciona o evento de rolagem suave APENAS aos links da "top bar"
+document.querySelectorAll('.top-bar-link').forEach(link => {
   link.addEventListener('click', function (event) {
     event.preventDefault();
+
+    if (isMenuOpen) {
+      closeMenu();
+    }
+
     const targetId = this.getAttribute('href');
     const targetElement = document.querySelector(targetId);
     targetElement.scrollIntoView({ behavior: 'smooth' });
-    closeMenu();
   });
 });
